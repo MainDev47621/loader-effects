@@ -1,0 +1,94 @@
+* {
+    --bg-color: #000;
+    --gradient: linear-gradient(45deg, transparent, transparent 40%, #e5f403);
+}
+
+body {
+    background: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.loader {
+    background: var(--gradient);
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    animation: animate 2s linear infinite;
+}
+
+.loader::before {
+    content: '';
+    background: var(--bg-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    right: 10px;
+    z-index: 5;
+}
+
+.loader::after {
+    content: '';
+    background: var(--gradient);
+    border-radius: 50%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    z-index: 2;
+    filter: blur(30px);
+}
+
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@-o-keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@-moz-keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
+
+@-webkit-keyframes animate {
+    0% {
+        transform: rotate(0deg);
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+        filter: hue-rotate(360deg);
+    }
+}
