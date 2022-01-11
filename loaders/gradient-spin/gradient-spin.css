@@ -9,6 +9,17 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    position: relative;
+}
+
+.back-arrow {
+    border: 0.01rem solid #fff;
+    color: #fff;
+    transition: 0.2s;
+}
+
+.back-arrow:hover {
+    background: rgba(255, 255, 255, 0.4);
 }
 
 .loader {

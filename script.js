@@ -1,10 +1,10 @@
 const source = document.getElementById('loader-options').innerHTML;
 const template = Handlebars.compile(source);
-const loaderNames = ['circles-wave', 'dot-circle', 'dots-hue-rotate', 'glass-circle', 'gradient-spin', 'nested-circles', 'text-fill'];
+const loaderNames = ['circles-wave', 'dot-circle', 'dots-hue-rotate', 'glass-circle', 'gradient-spin', 'nested-circles', 'text-fill', 'vertical-bars-wave'];
 const loaderObjects = loaderNames.map(loader => (
     {
         name: loader,
-        url: `./loaders-html/${loader}.html`
+        url: `./loaders/${loader}/${loader}.html`
     }
 ));
 console.log(loaderObjects);
